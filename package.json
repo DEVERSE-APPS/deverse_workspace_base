@@ -1,0 +1,16 @@
+{
+  "name": "workspace",
+  "type": "module",
+  "private": true,
+  "workspaces": ["artifacts/*", "lib/*"],
+  "scripts": {
+    "dev": "bun run router.ts & bun --filter='*' dev",
+    "build": "bun --filter='*' build",
+    "start:router": "bun run router.ts",
+    "start:prod": "bun run router.ts --prod"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  }
+}
